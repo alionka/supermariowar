@@ -1,0 +1,49 @@
+In file included from _src/global.h:275:0,
+                 from _src/map.cpp:5:
+_src/player.h:500:16: warning: ‘MO_SuperFireball’ is already a friend of ‘CPlayer’ [enabled by default]
+   friend class MO_SuperFireball;
+                ^
+_src/map.cpp: In member function ‘void CMap::loadMap(const string&, ReadType)’:
+_src/map.cpp:631:80: error: invalid conversion from ‘const char*’ to ‘char*’ [-fpermissive]
+     char * szFindUnderscore = strstr(g_szBackgroundConversion[iBackground], "_");
+                                                                                ^
+_src/map.cpp: In member function ‘void CMap::preDrawPreviewWarps(SDL_Surface*, bool)’:
+_src/map.cpp:2658:39: warning: narrowing conversion of ‘(((int)warp->Warp::connection) * ((int)iTileSize))’ from ‘int’ to ‘Sint16 {aka short int}’ inside { } is ill-formed in C++11 [-Wnarrowing]
+     SDL_Rect rSrc = {warp->connection * iTileSize, warp->direction * iTileSize, iTileSize, iTileSize};
+                                       ^
+_src/map.cpp:2658:68: warning: narrowing conversion of ‘(((int)warp->Warp::direction) * ((int)iTileSize))’ from ‘int’ to ‘Sint16 {aka short int}’ inside { } is ill-formed in C++11 [-Wnarrowing]
+     SDL_Rect rSrc = {warp->connection * iTileSize, warp->direction * iTileSize, iTileSize, iTileSize};
+                                                                    ^
+_src/map.cpp:2658:101: warning: narrowing conversion of ‘iTileSize’ from ‘short int’ to ‘Uint16 {aka short unsigned int}’ inside { } is ill-formed in C++11 [-Wnarrowing]
+     SDL_Rect rSrc = {warp->connection * iTileSize, warp->direction * iTileSize, iTileSize, iTileSize};
+                                                                                                     ^
+_src/map.cpp:2658:101: warning: narrowing conversion of ‘iTileSize’ from ‘short int’ to ‘Uint16 {aka short unsigned int}’ inside { } is ill-formed in C++11 [-Wnarrowing]
+_src/map.cpp:2659:24: warning: narrowing conversion of ‘(((int)iTileSize) * i)’ from ‘int’ to ‘Sint16 {aka short int}’ inside { } is ill-formed in C++11 [-Wnarrowing]
+     SDL_Rect rDst = {i * iTileSize, j * iTileSize, iTileSize, iTileSize};
+                        ^
+_src/map.cpp:2659:39: warning: narrowing conversion of ‘(((int)iTileSize) * j)’ from ‘int’ to ‘Sint16 {aka short int}’ inside { } is ill-formed in C++11 [-Wnarrowing]
+     SDL_Rect rDst = {i * iTileSize, j * iTileSize, iTileSize, iTileSize};
+                                       ^
+_src/map.cpp:2659:72: warning: narrowing conversion of ‘iTileSize’ from ‘short int’ to ‘Uint16 {aka short unsigned int}’ inside { } is ill-formed in C++11 [-Wnarrowing]
+     SDL_Rect rDst = {i * iTileSize, j * iTileSize, iTileSize, iTileSize};
+                                                                        ^
+_src/map.cpp:2659:72: warning: narrowing conversion of ‘iTileSize’ from ‘short int’ to ‘Uint16 {aka short unsigned int}’ inside { } is ill-formed in C++11 [-Wnarrowing]
+_src/map.cpp: In member function ‘void CMap::preDrawPreviewMapItems(SDL_Surface*, bool)’:
+_src/map.cpp:2680:38: warning: narrowing conversion of ‘(((int)((CMap*)this)->CMap::mapitems[j].MapItem::itype) * ((int)iTileSize))’ from ‘int’ to ‘Sint16 {aka short int}’ inside { } is ill-formed in C++11 [-Wnarrowing]
+   SDL_Rect rSrc = {mapitems[j].itype * iTileSize, 0, iTileSize, iTileSize};
+                                      ^
+_src/map.cpp:2680:74: warning: narrowing conversion of ‘iTileSize’ from ‘short int’ to ‘Uint16 {aka short unsigned int}’ inside { } is ill-formed in C++11 [-Wnarrowing]
+   SDL_Rect rSrc = {mapitems[j].itype * iTileSize, 0, iTileSize, iTileSize};
+                                                                          ^
+_src/map.cpp:2680:74: warning: narrowing conversion of ‘iTileSize’ from ‘short int’ to ‘Uint16 {aka short unsigned int}’ inside { } is ill-formed in C++11 [-Wnarrowing]
+_src/map.cpp:2681:35: warning: narrowing conversion of ‘(((int)((CMap*)this)->CMap::mapitems[j].MapItem::ix) * ((int)iTileSize))’ from ‘int’ to ‘Sint16 {aka short int}’ inside { } is ill-formed in C++11 [-Wnarrowing]
+   SDL_Rect rDst = {mapitems[j].ix * iTileSize, mapitems[j].iy * iTileSize, iTileSize, iTileSize};
+                                   ^
+_src/map.cpp:2681:63: warning: narrowing conversion of ‘(((int)((CMap*)this)->CMap::mapitems[j].MapItem::iy) * ((int)iTileSize))’ from ‘int’ to ‘Sint16 {aka short int}’ inside { } is ill-formed in C++11 [-Wnarrowing]
+   SDL_Rect rDst = {mapitems[j].ix * iTileSize, mapitems[j].iy * iTileSize, iTileSize, iTileSize};
+                                                               ^
+_src/map.cpp:2681:96: warning: narrowing conversion of ‘iTileSize’ from ‘short int’ to ‘Uint16 {aka short unsigned int}’ inside { } is ill-formed in C++11 [-Wnarrowing]
+   SDL_Rect rDst = {mapitems[j].ix * iTileSize, mapitems[j].iy * iTileSize, iTileSize, iTileSize};
+                                                                                                ^
+_src/map.cpp:2681:96: warning: narrowing conversion of ‘iTileSize’ from ‘short int’ to ‘Uint16 {aka short unsigned int}’ inside { } is ill-formed in C++11 [-Wnarrowing]
+make: *** [build/map.o] Error 1
